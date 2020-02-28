@@ -6,10 +6,4 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY main.py .
-
-ENV FLASK_APP=main.py
-
-ENTRYPOINT [ "python" ]
-
-CMD [ "main.py" ]
+COPY app.py .
